@@ -6,12 +6,12 @@
 </a>
 
 <!-- Name + tagline -->
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=32&pause=1000&color=E0E0E0&center=true&vCenter=true&width=800&lines=Hi%2C+I'm+Krish+Dubey.;I+build+systems+that+actually+run." alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=32&pause=1000&color=E0E0E0&center=true&vCenter=true&width=800&lines=Hi%2C+I'm+Krish+Dubey.;I+build+AI+systems.;Then+I+measure+whether+they+work." alt="Typing SVG" />
 
 <br/>
 
 <p align="center">
-  <em>CS student @ SRH Munich &nbsp;·&nbsp; Backend · ML Systems · Computer Vision &nbsp;·&nbsp; 20 hrs/week Werkstudent</em>
+  <em>CS student @ SRH Munich &nbsp;·&nbsp; LLM agents · Voice AI · ML APIs &nbsp;·&nbsp; Build it. Measure it. Ship it.</em>
 </p>
 
 <br/>
@@ -31,11 +31,11 @@
 
 ```python
 krish = {
-    "role"      : "CS Student → Werkstudent (Backend / ML / CV)",
+    "role"      : "CS Student → Werkstudent (Applied AI / ML / Backend)",
     "studying"  : "B.Sc. Computer Science @ SRH Hochschule München (2026–2029)",
-    "building"  : ["containerized ML inference APIs", "computer-vision pipelines", "explainable AI systems"],
-    "mindset"   : "Ship real systems. Measure everything. Iterate fast.",
-    "currently" : "Learning AWS · Deepening German (Goethe B1)",
+    "building"  : ["real-time voice AI", "multi-agent document analysis", "ML inference APIs"],
+    "mindset"   : "Build it. Measure it. Ship it.",
+    "currently" : "Speech-to-text benchmark for SEVRIN · German (Goethe B1)",
     "available" : "20 hrs/week · Open to Werkstudent roles · Munich-based",
 }
 ```
@@ -52,33 +52,35 @@ krish = {
 
 ![Python](https://img.shields.io/badge/Python-Advanced-%233776AB?style=flat-square&logo=python&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-Intermediate-%23003B57?style=flat-square&logo=postgresql&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+
+**LLMs & Agents**
+
+![Claude API](https://img.shields.io/badge/Claude_API-%23D97757?style=flat-square&logo=anthropic&logoColor=white)
+![OpenAI API](https://img.shields.io/badge/OpenAI_API-%23412991?style=flat-square&logo=openai&logoColor=white)
+![ChromaDB](https://img.shields.io/badge/ChromaDB_RAG-%23444?style=flat-square)
+![Pydantic](https://img.shields.io/badge/Pydantic-%23E92063?style=flat-square&logo=pydantic&logoColor=white)
+
+**Voice AI**
+
+![faster-whisper](https://img.shields.io/badge/faster--whisper-%23444?style=flat-square)
+![whisper.cpp](https://img.shields.io/badge/whisper.cpp-%23444?style=flat-square)
+![ECAPA-TDNN](https://img.shields.io/badge/ECAPA--TDNN_Speaker_Verification-%23444?style=flat-square)
 
 **Backend & APIs**
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-%23009688?style=flat-square&logo=fastapi&logoColor=white)
-![REST](https://img.shields.io/badge/REST_API_Design-%23404040?style=flat-square)
+![WebSockets](https://img.shields.io/badge/asyncio_WebSockets-%23404040?style=flat-square)
 ![Docker](https://img.shields.io/badge/Docker-%232496ED?style=flat-square&logo=docker&logoColor=white)
+![Electron](https://img.shields.io/badge/Electron-%2347848F?style=flat-square&logo=electron&logoColor=white)
 
-**ML / AI**
+**ML & Computer Vision**
 
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-%23F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![SHAP](https://img.shields.io/badge/SHAP_Explainability-%23444?style=flat-square)
-![Feature Engineering](https://img.shields.io/badge/Feature_Engineering-%23444?style=flat-square)
-
-**Computer Vision**
-
 ![OpenCV](https://img.shields.io/badge/OpenCV-%235C3EE8?style=flat-square&logo=opencv&logoColor=white)
 ![YOLO](https://img.shields.io/badge/YOLO_Pipelines-%23111?style=flat-square)
-
-**Data & Monitoring**
-
 ![Pandas](https://img.shields.io/badge/Pandas-%23150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-%23013243?style=flat-square&logo=numpy&logoColor=white)
-![Z-Score Drift](https://img.shields.io/badge/Z--Score_Drift_Monitoring-%23444?style=flat-square)
-
-**Cloud (Learning)**
-
-![AWS](https://img.shields.io/badge/AWS_EC2%2FS3-Developing-%23FF9900?style=flat-square&logo=amazonaws&logoColor=white)
 
 </div>
 
@@ -90,50 +92,74 @@ krish = {
 
 <br/>
 
-### 🔷 [DecisionAPI](https://github.com/dubeykrish0307/DecisionAPI) — Containerized ML Inference Service
+### 🔷 [SEVRIN](https://github.com/dubeykrish0307/Personal-VA) — Real-Time Voice AI Assistant
 
-> A production-grade REST inference service — not a notebook. A deployable system.
+> A voice assistant that runs on my laptop, checks it's my voice, and knows when to stay quiet.
+
+| Part | How it works |
+|---|---|
+| Backend | Python asyncio WebSocket server + Electron desktop app |
+| Speech-to-text | faster-whisper plus a resident whisper.cpp server (large-v3-turbo) |
+| Speaker verification | ECAPA-TDNN embeddings with cohort score normalisation |
+| Reasoning | Claude API, with persistent memory and fact checks before anything is stored |
+| Conversation | Wake word, streaming TTS, barge-in, proactive speech (rules first, LLM only for unclear cases) |
+
+**Next:** speech-to-text benchmark (word error rate + latency on my own commands), speaker-verification false-accept / false-reject rates, demo video.
+
+<br/>
+
+### 🔷 [NexusIQ](https://github.com/dubeykrish0307/NexusIQ) — Multi-Agent Document Intelligence
+
+> Agents that extract, analyse and validate financial and legal documents.
+
+Built with FastAPI · OpenAI API · ChromaDB · PyMuPDF · Pydantic · SQLAlchemy · Streamlit · pytest · Docker
+
+**Next (v2):** a labelled evaluation set (retrieval recall@5, faithfulness, field accuracy), hybrid search + reranker, German contracts.
+
+<br/>
+
+### 🔷 [DecisionAPI](https://github.com/dubeykrish0307/DecisionAPI) — Live Churn-Prediction API
+
+> A deployed inference service, not a notebook. [Live docs](https://decisionapi.onrender.com/docs)
 
 | Metric | Result |
 |---|---|
-| Avg. response latency | **< 120ms** |
-| Input variables monitored | **12** |
-| Test scenarios validated | **40+** with 100% pass rate |
-| Drift issues caught pre-deploy | **3** via Z-score monitoring |
-| Prediction logs captured | **500+ requests** with full traceability |
+| Model quality | **ROC-AUC 0.84** (logistic regression, Telco dataset, ~7,000 customers) |
+| Avg. response latency | **< 120 ms** |
+| Request validation | **8** input fields checked with Pydantic |
+| Drift checks | **3** numeric features, flagged beyond 3σ (Z-score) |
+| Model management | Versioned models + retrain endpoint, predictions logged to SQLite |
 
-Built with FastAPI · Docker · Scikit-learn · Z-score drift monitoring · Structured logging
+Built with FastAPI · Docker · Scikit-learn · Z-score drift monitoring · SQLite logging
 
 <br/>
 
 ### 🔷 [Explainable Credit Risk Decision System](https://github.com/dubeykrish0307/Explainable-Credit-Risk-Decision-System)
 
-> ML that explains itself — because black-box decisions in finance aren't acceptable.
+> ML that explains itself, and an honest look at what accuracy hides. [Live app](https://explainable-credit-risk-decision-system.streamlit.app/)
 
-| Metric | Result |
+| Held-out test set (200 applicants, 60 defaults) | Result |
 |---|---|
-| Models evaluated | **3** (Logistic Regression, Random Forest, + 1 more) |
-| Features engineered | **15+** financial variables |
-| Validation accuracy | **87%** on held-out test set |
-| Loan decisions simulated | **200+ applications** with SHAP interpretation |
-| Ambiguous outputs reduced | **~45%** via Approve / Review / Reject mapping |
+| Baseline: approve everyone | **70%** accuracy, **0** defaults caught |
+| Logistic regression | **75%** accuracy, ROC-AUC **0.81**, **47 of 60** defaults caught |
+| Models compared | **2** (logistic regression, random forest) |
+| Decision bands | Approve < 30% · Review 30–60% · Reject > 60% default risk |
 
-Built with Scikit-learn · SHAP · Streamlit · Financial decision-mapping logic
+Built with Scikit-learn · SHAP · Streamlit · bias checks across age and gender / nationality proxies
 
 <br/>
 
 ### 🔷 [German Business Data Insight Engine](https://github.com/dubeykrish0307/GermanBusinessDataAutopsy)
 
-> Automated economic analysis — turning 4 hours of manual work into 20 minutes.
+> German retail turnover vs energy prices, read by a rule-based insight engine.
 
-| Metric | Result |
+| Part | Detail |
 |---|---|
-| Macroeconomic indicators tracked | **8+** across retail & energy |
-| Time-series span | **5 years** |
-| Outlier events flagged | **11** inflation-adjusted anomalies |
-| Manual interpretation time saved | **~4 hrs → < 20 min** per cycle |
+| Data | Destatis retail turnover (nominal and real) + Eurostat non-household electricity prices |
+| Span | 2020–2024, half-yearly (where both series overlap) |
+| Insight rules | **4**: margin pressure, illusory growth, healthy growth, demand shock |
 
-Built with Pandas · NumPy · Rule-based anomaly detection · Automated insight generation
+Built with Pandas · NumPy · Rule-based insight generation
 
 <br/>
 
@@ -142,14 +168,14 @@ Built with Pandas · NumPy · Rule-based anomaly detection · Automated insight 
 ## `> experience --timeline`
 
 ```
-2025 Oct  ←─────────────────── BookYouBrand · Computer Vision Engineer
-                                 Rakshak Monitoring System
-                                 50,000+ frames · 8 simultaneous camera feeds
-                                 ~28,000 training samples · dataset skew 8:1 → under 2:1
+2025 Oct  ←─────────────────── BookYouBrand · Computer Vision Engineer (contract)
+                                 Rakshak traffic-monitoring system
+                                 OpenCV pipelines · 50,000+ frames · 8 camera feeds
+                                 YOLO dataset prep · 6 revision rounds · ~28,000 training samples
 
 2025 Mar  ←─────────────────── AWS · ML Intern
-                                 Computer vision project · production ML pipeline ops
-                                 Data quality monitoring · AWS cloud infrastructure
+                                 Computer-vision project · maintained the ML pipeline
+                                 Pipeline documentation · fault and bug reports
 
 2024 Sep  ←─────────────────── Enclo Industries · Freelance Web Developer
                                  Full corporate site · 4-week delivery
@@ -177,13 +203,14 @@ Built with Pandas · NumPy · Rule-based anomaly detection · Automated insight 
 
 ---
 
-## `> roadmap --current`
+## `> roadmap --next`
 
 ```
-[██████████░░░░░░░░░░]  AWS (EC2, S3, Lambda)       → actively building
-[████████░░░░░░░░░░░░]  German Language (Goethe B1)  → enrolled
-[███████░░░░░░░░░░░░░]  MLOps fundamentals            → learning
-[█████░░░░░░░░░░░░░░░]  System design patterns        → reading
+Oct 2026   SEVRIN speech-to-text benchmark (word error rate + latency)
+Nov 2026   NexusIQ v2: labelled eval set, hybrid search, German contracts
+Nov 2026   hackaTUM (applying)
+Dec 2026   Munich MCP server + agent eval harness
+Jan 2027   Training my own model in PyTorch
 ```
 
 <br/>
@@ -194,9 +221,9 @@ Built with Pandas · NumPy · Rule-based anomaly detection · Automated insight 
 
 <div align="center">
 
-I'm actively looking for a **Werkstudent role** (Backend / ML / Data Engineering) in Munich — 20 hrs/week.
+I'm looking for a **Werkstudent role** in applied AI / LLM engineering, ML engineering or backend in Munich, 20 hrs/week.
 
-If you're building something real and need someone who ships, let's talk.
+If you're building something real and want someone who measures before claiming, let's talk.
 
 <br/>
 
