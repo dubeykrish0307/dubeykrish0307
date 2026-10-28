@@ -92,7 +92,7 @@ krish = {
 
 <br/>
 
-### 🔷 [SEVRIN](https://github.com/dubeykrish0307/Personal-VA) — Real-Time Voice AI Assistant
+### 🔷 [SEVRIN](https://github.com/dubeykrish0307/sevrin) — Real-Time Voice AI Assistant
 
 > A voice assistant that runs on my laptop, checks it's my voice, and knows when to stay quiet.
 
@@ -112,7 +112,9 @@ krish = {
 
 > Agents that extract, analyse and validate financial and legal documents.
 
-Built with FastAPI · OpenAI API · ChromaDB · PyMuPDF · Pydantic · SQLAlchemy · Streamlit · pytest · Docker
+Test run on a 27,090-word annual report: **4** agents, **16** tool calls, **9** claims verified against the source text. Questions the document can't answer get "not enough information" instead of a guess.
+
+Built with FastAPI · OpenAI API · ChromaDB · PyMuPDF · Pydantic · SQLAlchemy · Streamlit
 
 **Next (v2):** a labelled evaluation set (retrieval recall@5, faithfulness, field accuracy), hybrid search + reranker, German contracts.
 
@@ -124,8 +126,9 @@ Built with FastAPI · OpenAI API · ChromaDB · PyMuPDF · Pydantic · SQLAlchem
 
 | Metric | Result |
 |---|---|
-| Model quality | **ROC-AUC 0.84** (logistic regression, Telco dataset, ~7,000 customers) |
-| Avg. response latency | **< 120 ms** |
+| Model quality | **ROC-AUC 0.83** on 1,407 held-out customers (5-fold CV 0.84), logistic regression, Telco dataset |
+| Risk tiers | HIGH tier actually churns at **65%**, LOW tier at **10%** |
+| Latency | **~10 ms** median, 14 ms p99 over 500 local requests (incl. logging + drift check) |
 | Request validation | **8** input fields checked with Pydantic |
 | Drift checks | **3** numeric features, flagged beyond 3σ (Z-score) |
 | Model management | Versioned models + retrain endpoint, predictions logged to SQLite |
@@ -134,7 +137,7 @@ Built with FastAPI · Docker · Scikit-learn · Z-score drift monitoring · SQLi
 
 <br/>
 
-### 🔷 [Explainable Credit Risk Decision System](https://github.com/dubeykrish0307/Explainable-Credit-Risk-Decision-System)
+### 🔷 [Explainable Credit Risk Decision System](https://github.com/dubeykrish0307/ECRDS)
 
 > ML that explains itself, and an honest look at what accuracy hides. [Live app](https://explainable-credit-risk-decision-system.streamlit.app/)
 
@@ -142,7 +145,7 @@ Built with FastAPI · Docker · Scikit-learn · Z-score drift monitoring · SQLi
 |---|---|
 | Baseline: approve everyone | **70%** accuracy, **0** defaults caught |
 | Logistic regression | **75%** accuracy, ROC-AUC **0.81**, **47 of 60** defaults caught |
-| Models compared | **2** (logistic regression, random forest) |
+| Random forest (compared) | **73%** accuracy, only **35 of 60** defaults caught, so the simpler model stays |
 | Decision bands | Approve < 30% · Review 30–60% · Reject > 60% default risk |
 
 Built with Scikit-learn · SHAP · Streamlit · bias checks across age and gender / nationality proxies
@@ -158,6 +161,7 @@ Built with Scikit-learn · SHAP · Streamlit · bias checks across age and gende
 | Data | Destatis retail turnover (nominal and real) + Eurostat non-household electricity prices |
 | Span | 2020–2024, half-yearly (where both series overlap) |
 | Insight rules | **4**: margin pressure, illusory growth, healthy growth, demand shock |
+| Finding | H2 2020 → H2 2024: nominal turnover **+15%**, real turnover **−4%**; 8 flags across 9 half-years |
 
 Built with Pandas · NumPy · Rule-based insight generation
 
